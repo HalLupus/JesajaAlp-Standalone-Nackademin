@@ -57186,7 +57186,7 @@ Transform:
   m_GameObject: {fileID: 2141416632}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0, y: 0.00019, z: -0.00627}
+  m_LocalPosition: {x: -0, y: 0.00019, z: -0.00633}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57494,6 +57494,7 @@ GameObject:
   - component: {fileID: 6658414306807765807}
   - component: {fileID: 6658414306807765806}
   - component: {fileID: 6658414306807765805}
+  - component: {fileID: 6658414306807765810}
   m_Layer: 0
   m_Name: Cork gun
   m_TagString: Untagged
@@ -59592,7 +59593,7 @@ GameObject:
   - component: {fileID: 9216460575909969384}
   - component: {fileID: 9216460575909969383}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Cork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70289,7 +70290,7 @@ MonoBehaviour:
   m_InteractionLayers:
     m_Bits: 2
   m_Handedness: 0
-  m_AttachTransform: {fileID: 1397025482}
+  m_AttachTransform: {fileID: 2141416633}
   m_KeepSelectedTargetValid: 1
   m_DisableVisualsWhenBlockedInGroup: 1
   m_StartingSelectedInteractable: {fileID: 0}
@@ -70384,7 +70385,19 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6658414306807765810}
+        m_TargetAssemblyTypeName: CorkGun, Assembly-CSharp
+        m_MethodName: FireCork
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -70487,8 +70500,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.00033635518, y: 0.0010962413, z: 0.0096225515}
-  m_Center: {x: 0.00000013210229, y: -0.00020679062, z: -0.0011930729}
+  m_Size: {x: 0.00033635518, y: 0.0010962413, z: 0.006994785}
+  m_Center: {x: 0.00000013209879, y: -0.00020679063, z: 0.0001208052}
 --- !u!65 &6658414306807765809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70510,6 +70523,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.00033635518, y: 0.00030948978, z: 0.00065104244}
   m_Center: {x: 0.00000013209879, y: 0.0001865849, z: -0.0063390564}
+--- !u!114 &6658414306807765810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95478597073043649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf3acbbc8f0845f3b64de2541780648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  socketInteractor: {fileID: 6658414306807765805}
+  launchForce: -10
+  disableDuration: 1
 --- !u!114 &6678509202275749871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76308,7 +76336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 1131850010}
   m_Colliders: []
   m_InteractionLayers:
     m_Bits: 2
