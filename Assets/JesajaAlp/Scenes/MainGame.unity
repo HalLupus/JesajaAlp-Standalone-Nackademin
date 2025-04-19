@@ -13099,7 +13099,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.03
+  m_Intensity: 0.12
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -49586,6 +49586,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743917465}
   m_Mesh: {fileID: -5495902117074765545, guid: c69d4793551884e6d9388cb8780ec96a, type: 3}
+--- !u!1001 &1744699978
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1f82e0e5976f8fe42a05c412219badee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.64
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1f82e0e5976f8fe42a05c412219badee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1f82e0e5976f8fe42a05c412219badee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 64.53
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1f82e0e5976f8fe42a05c412219badee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1f82e0e5976f8fe42a05c412219badee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1f82e0e5976f8fe42a05c412219badee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1f82e0e5976f8fe42a05c412219badee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1f82e0e5976f8fe42a05c412219badee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1f82e0e5976f8fe42a05c412219badee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1f82e0e5976f8fe42a05c412219badee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1f82e0e5976f8fe42a05c412219badee, type: 3}
+      propertyPath: m_Name
+      value: ringtoss booth
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1f82e0e5976f8fe42a05c412219badee, type: 3}
 --- !u!1 &1746472312
 GameObject:
   m_ObjectHideFlags: 0
@@ -66767,7 +66824,7 @@ Transform:
   m_GameObject: {fileID: 3394779860412619398}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 9.4, y: -0.76, z: 55.1}
+  m_LocalPosition: {x: 8.16, y: -0.76, z: 54.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -80432,3 +80489,4 @@ SceneRoots:
   - {fileID: 391359049}
   - {fileID: 2107236217}
   - {fileID: 51691683}
+  - {fileID: 1744699978}
