@@ -39,7 +39,7 @@ public class CorkGun : MonoBehaviour
             Rigidbody rb = corkObject.GetComponent<Rigidbody>();
             XRGrabInteractable grabInteractable = corkObject.GetComponent<XRGrabInteractable>();
 
-            // Unparent the cork so it’s no longer a child of the socket.
+            // Unparent the cork so itï¿½s no longer a child of the socket.
             corkObject.transform.parent = null;
 
             // Slightly offset the cork so it doesn't immediately clip back.
@@ -52,7 +52,7 @@ public class CorkGun : MonoBehaviour
 
                 // Prepare the Rigidbody.
                 rb.isKinematic = false;
-                rb.velocity = Vector3.zero;
+                rb.linearVelocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
 
                 // Test applying a stronger force (for debugging) to see if it moves.
