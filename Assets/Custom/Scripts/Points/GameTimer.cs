@@ -33,7 +33,7 @@ public class GameTimer : MonoBehaviour
         }
 
         // Optional: Update UI here
-        Debug.Log($"Time Left: {currentTime:F1}");
+        //Debug.Log($"Time Left: {currentTime:F1}");
     }
 
     public void StartTimer()

@@ -2,17 +2,26 @@ using UnityEngine;
 
 public class PointGiver : MonoBehaviour
 {
-    public int pointsToGive = 5; // The amount this script will add
+    public int pointsToGive = 5;             // Amount to add
+    public string targetLayerName = "Player"; // Only trigger with this layer
 
-    // Reference to the PointManager
     public PointManager pointManager;
 
     void Start()
     {
-        // Optionally, automatically find the PointManager in the scene
+        // Automatically find the PointManager in the scene
         if (pointManager == null)
         {
             pointManager = FindObjectOfType<PointManager>();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Check if the object entering the trigger is on the correct layer
+        if (other.gameObject.layer == LayerMask.NameToLayer(targetLayerName))
+        {
+            GivePoints();
         }
     }
 
