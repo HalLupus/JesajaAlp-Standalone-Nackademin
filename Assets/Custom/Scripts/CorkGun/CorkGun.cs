@@ -57,7 +57,7 @@ public class CorkGun : MonoBehaviour
 
                 // Test applying a stronger force (for debugging) to see if it moves.
                 float appliedForce = launchForce; // You could tweak this in the Inspector.
-                rb.AddForce(transform.forward * appliedForce, ForceMode.Impulse);
+                rb.AddForce(-transform.forward * appliedForce, ForceMode.Impulse);
                 Debug.Log("Applied force: " + (transform.forward * appliedForce));
             }
             else
