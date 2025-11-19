@@ -4,9 +4,11 @@ using TMPro;
 public class PointManager : MonoBehaviour
 {
     public int totalPoints;
+    
+    public int pointsMultiplier = 1; //needs to be 1 by defualt, since all gained points are multiplied by this.
 
     [Header("UI")]
-    public TMP_Text pointsText;   // Drag your TextMeshPro text object here
+    public TMP_Text pointsText;
 
     void Awake()
     {
@@ -17,7 +19,7 @@ public class PointManager : MonoBehaviour
     // Function to add points
     public void AddPoints(int amount)
     {
-        totalPoints += amount;
+        totalPoints += amount * pointsMultiplier;
         UpdateUI();
     }
 
