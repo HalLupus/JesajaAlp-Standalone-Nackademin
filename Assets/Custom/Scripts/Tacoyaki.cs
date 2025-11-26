@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class RandomTriggerEffect : MonoBehaviour
+public class Tacoyaki : MonoBehaviour
 {
     [Header("Target Object")]
     public GameObject targetObject; // Only triggers when this object enters
@@ -16,17 +16,21 @@ public class RandomTriggerEffect : MonoBehaviour
     public GameTimer gameTimer; // Drag your GameTimer here
     public float addTimeAmount = 10f; // Amount of time to add if chosen
 
+    [Header("Effect Display")]
+    public EffectDisplay effectDisplay; // Drag your EffectDisplay here
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == targetObject)
         {
             int randomChoice = Random.Range(0, 3); // 0, 1, or 2
+
             switch (randomChoice)
             {
                 case 0:
                     if (pointManager != null)
                     {
-                        Debug.Log("RandomTriggerEffect: Temporary points multiplier activated!");
+                        effectDisplay?.ShowMessage($"Points x{multiplierValue} for {multiplierDuration} seconds!");
                         StartCoroutine(TemporaryMultiplier());
                     }
                     else
@@ -34,22 +38,24 @@ public class RandomTriggerEffect : MonoBehaviour
                         Debug.LogWarning("RandomTriggerEffect: PointManager not assigned!");
                     }
                     break;
+
                 case 1:
                     if (pointManager != null)
                     {
                         pointManager.AddPoints(addPointsAmount);
-                        Debug.Log($"RandomTriggerEffect: Added {addPointsAmount} points!");
+                        effectDisplay?.ShowMessage($"You gained {addPointsAmount} points!");
                     }
                     else
                     {
                         Debug.LogWarning("RandomTriggerEffect: PointManager not assigned!");
                     }
                     break;
+
                 case 2:
                     if (gameTimer != null)
                     {
                         gameTimer.AddTime(addTimeAmount);
-                        Debug.Log($"RandomTriggerEffect: Added {addTimeAmount} seconds to timer!");
+                        effectDisplay?.ShowMessage($"+{addTimeAmount} seconds added!");
                     }
                     else
                     {
@@ -68,7 +74,9 @@ public class RandomTriggerEffect : MonoBehaviour
     {
         int originalMultiplier = pointManager.pointsMultiplier;
         pointManager.pointsMultiplier = multiplierValue;
+
         yield return new WaitForSeconds(multiplierDuration);
+
         pointManager.pointsMultiplier = originalMultiplier;
         Debug.Log("RandomTriggerEffect: Points multiplier reset to original value.");
     }
